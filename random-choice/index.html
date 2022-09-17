@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Choice</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+
+                <div class="card ">
+                    <div class="card-header">
+                        Pilihan acak untuk Seminar Tematik.
+                    </div>
+                    <div class="card-body">
+                        <div class="list">
+                            List Seminar:
+                            <span id="listSeminar"></span>
+                            <span id="totalSeminar"></span>
+                        </div>
+                        <hr>
+                        <div class="answer">
+                            Pilihan Kamu:
+                            <span id="answerSeminar"></span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button id="showAnswer" class="btn btn-info">SUBMIT</button>
+                        <button id="clearAnswer" class="btn btn-warning d-none">CLEAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let listText = "";
+        let arrSeminar = [
+            "BCC (BSI CAREER CENTER)",
+            "INCUBATOR CENTER (IC UBSI)",
+            "LEMBAGA SERTIFIKASI PROFESI (LSP)",
+            "TIM BERITA UBSI",
+            "SOCIAL MEDIA UBSI",
+            "LEMBAGA BAHASA UBSI",
+            "TIM BEASISWA UBSI",
+            "SEMINAR BELA NEGARA",
+            "KEMAHASISWAAN UBSI",
+        ];
+
+        arrSeminar.forEach(function (index, item) {
+            if (item === arrSeminar.length - 2) {
+                listText += index + ', dan ';
+            } else if (item === arrSeminar.length - 1) {
+                listText += index + ' - ';
+            } else {
+                listText += index + ', ';
+            }
+        });
+
+        document.getElementById('listSeminar').innerHTML = listText;
+        document.getElementById('totalSeminar').innerHTML = "Total " + arrSeminar.length + " Seminar.";
+
+        $(document).ready(function () {
+            $('#showAnswer').on('click', function () {  
+                
+                let randomSeminar = arrSeminar[Math.floor(Math.random() * arrSeminar.length)];
+                $('#answerSeminar').html(randomSeminar);
+                
+                if ($('#clearAnswer').hasClass('d-none')) {
+                    $('#clearAnswer').removeClass('d-none');
+                    
+                    $('#clearAnswer').on('click', function () {  
+                        $('#answerSeminar').html('');
+                        $('#clearAnswer').addClass('d-none');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

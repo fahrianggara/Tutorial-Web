@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik:400,500,700");
+
+:root{
+    --primary-color:#d81b60;
+    --prim-l-color:#ff5c8d;
+    --prim-d-color:#a00037;
+    --text-color: #000;
+}
+
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+nav {
+    background: #fff;
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+nav.navbar-light a.navbar-brand{
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--prim-l-color) !important;
+}
+nav.navbar-light ul li a{
+    color: var(--text-color) !important;
+}
+nav.navbar-light ul li a:hover{
+    color: var(--primary-color) !important;
+}
+nav.navbar-light ul li a.active{
+    color: var(--primary-color) !important;
+}
+
+nav button{
+    border: 1px solid var(--primary-color) !important;
+}
+nav button:hover{
+    background: var(--primary-color) !important;
+    color: #fff !important;
+}
+
+div.container{
+    margin-top: 70px;
+}
+
+div.container .title-page{
+    font-size: 28px;
+}
+
+div.container p {
+    text-align: justify;
+}

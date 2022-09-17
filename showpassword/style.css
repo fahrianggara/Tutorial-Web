@@ -1,0 +1,34 @@
+/* Font Google: Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/* mengubah fontnya jadi rubik */
+* {
+    font-family: "Rubik", sans-serif;
+}
+
+/* Content menjadi ditengah */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling card biar ada shadownya */
+.card {
+    -webkit-box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Menampatkan posisi icon mata biar ada didalam input password */
+.form-group .passTog {
+    position: absolute;
+    top: 123px;
+    right: 30px;
+    cursor: pointer;
+}
+/* Agar besar iconya */
+.form-group .passTog i {
+    font-size: 18px;
+}

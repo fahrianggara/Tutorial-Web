@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Password</title>
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <!-- BS Icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.7.0/font/bootstrap-icons.min.css"
+        integrity="sha512-yLNTU6YQWEtsM/WVkUqd2jRzzq5hmfFUMVvziVlkgC0R9HTElDtyF4DiWiBeMS36npvN+NWwrr764A4AWGcmQQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="card">
+                    <form action="#" method="#" autocomplete="off">
+                        <div class="card-header">
+                            <h4 class="d-inline">Show Password</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- Email -->
+                            <div class="form-group row">
+                                <label for="email" class="col-lg-3 col-3 col-form-label">Email:</label>
+                                <div class="col-lg-9 col-9">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                        required />
+                                </div>
+                            </div>
+                            <!-- Password -->
+                            <div class="form-group row mt-3">
+                                <label for="password" class="col-lg-3 col-3 col-form-label">Password:</label>
+                                <div class="col-lg-9 col-9">
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Your Password" required />
+                                    <!-- Icon and toggle show -->
+                                    <div class="passTog"><i class="bi bi-eye-slash-fill" id="togglePassword"></i></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // membuat variabel tombol untuk melihat password, yang diambil dari id togglePassword
+        const togglePassword = document.querySelector("#togglePassword");
+        // membuat variabel untuk input password, yang diambil dari id password didalam input password
+        const password = document.querySelector("#password");
+
+        // Sekarang kita jalankan fungsinya biar diklik terus yang tadinya type password jadi type text.
+
+        // eventlistener ini fungsinya untuk meng-handle event yang terjadi.
+        togglePassword.addEventListener('click', function (e) {
+            // kita buat variabel type + pengecekan
+            const type = password.getAttribute('type') === "password" ? "text" : "password";
+            // maksudnya: jika kita meng-klik tombol mata. maka password akan jadi type text, jika tidak maka dijadikan type password.
+
+            // set atribute ini fugsi untuk mengganti typenya
+            password.setAttribute('type', type);
+
+            // ketika diklik tombolnya showpassword, kita ganti icon tutup mata(default) jadi icon mata
+            this.classList.toggle("bi-eye");
+        });
+    </script>
+</body>
+
+</html>

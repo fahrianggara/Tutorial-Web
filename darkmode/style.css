@@ -1,0 +1,79 @@
+/* Font Google: Rubik */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+/* Membuat variabel warna untuk light mode */
+:root {
+  --body-color: #fff;
+  --text-color: #000;
+}
+
+/* Dan ini membuat variabel warna untuk dark mode  */
+body.dark-theme {
+  --body-color: #121212;
+  --text-color: #fff;
+}
+
+/* Selanjutnya kita panggil variabel warna yang sudah kita buat di element body */
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+/* 
+  jika kalian ngebug atau tidak terpanggil darkmodenya, copas objek body-color dibawah ini dan masukkan ke class di dalam tag <body>
+  contoh: <body class="body-color">
+*/
+.body-color {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+/*
+   Untuk tanda bintang (*) ini berarti semua (mau element body, h1, a). pokoknya kalo bintang itu artinya semua,
+   jadi semua halaman kita kasih font style rubik yang sudah kita import di bagian atas
+*/
+* {
+  font-family: "Rubik", sans-serif;
+}
+
+/* Edit body navbar */
+.navbar {
+  background-color: var(--body-color);
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+}
+
+/* Edit Logo biar lebih keren */
+.navbar-brand {
+  font-weight: 500;
+  margin-left: 15px;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+.navbar-brand:hover {
+  color: #00829b;
+  transition: 0.3s;
+}
+
+/* Sekarang kita edit ikon bulannya */
+.change-theme i {
+  font-size: 25px;
+  margin-right: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+.change-theme i:hover {
+  color: #00829b;
+  transition: 0.3s;
+}
+
+/* di element p atau paragraph kita kasih justify */
+p {
+  text-align: justify;
+}

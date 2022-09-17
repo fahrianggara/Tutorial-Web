@@ -1,0 +1,16 @@
+* {
+    border-radius: 0 !important
+}
+
+.left {
+    float: left;
+    margin-left: 13px
+}
+
+.glyphicon-search {
+    color: #fff
+}
+
+.mobile_search {
+    margin: 6px 0 5px 0;
+}

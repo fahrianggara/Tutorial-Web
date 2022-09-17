@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Rubik", sans-serif !important;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card {
+    box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.38) ;
+    border-radius: 8px !important;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.navbar .card-body {
+    padding: 0;
+}
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between !important;
+}
+
+.navbar ul a {
+    padding: 5px 10px;
+    margin-right: 20px;
+    background: #00829b;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 20px;
+    position: relative;
+}
+
+.navbar ul a:hover, .navbar ul a.active {
+    bottom: 5px;
+    box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.38) ;
+}
