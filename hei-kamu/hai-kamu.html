@@ -452,7 +452,7 @@
             } else if (nama == '') {
                 await alertInput.fire('Oops!', 'Jangan lupa isi nama kamu yaa..');
                 mulai();
-            } else if (!/^[a-z]+$/.test(nama)) {
+            } else if (!/^[a-zA-Z]+$/.test(nama)) {
                 await alertInput.fire('Oops!', 'Nama harus berupa Huruf aja yaa..');
                 mulai();
             } else {
