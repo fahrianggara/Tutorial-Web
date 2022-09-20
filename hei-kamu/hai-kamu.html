@@ -1,12 +1,830 @@
-
 <!-- 
     Created by F Anggara
+    Blog: https://blog.kanzankazu.web.id/author/fahrianggara
+
     Inspirated by Rayya R
+    Blog: https://sinkronin.com
 -->
 
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Hei Kamu!</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> <style>@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); html, body{width: 100%; height: 100%; background: #121212; overflow: hidden; font-family: "Rubik", sans-serif;}p, span{margin: 0; padding: 0;}.container{position: relative; top: 29.5%;}.card{background: #121212; color: #fff; text-align: center; border: 1px solid #fff; border-radius: 8px;}.card-footer{border-top: 1px solid #fff; /* background: #121212; */}.card-footer .btn{color: #fff; border: 1px solid rgba(255, 255, 255, 0.145);}.card-footer .btn:hover, .card-footer .btn:active{border: 1px solid #fff;}img#gif{width: 200px; border-radius: 8px; margin-bottom: 20px;}#slideToKonten{position: relative; top: 80%; color: #fff; font-weight: bold; font-size: 20px;}.bg_heart{position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden !important;}.heart{opacity: 0.4; position: absolute; top: -50%; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -m-transform: rotate(-45deg); transform: rotate(-45deg)}.heart:before{position: absolute; top: -50%; left: 0; display: block; content: ""; width: 100%; height: 100%; background: inherit; border-radius: 100%;}.heart:after{position: absolute; top: 0; right: -50%; display: block; content: ""; width: 100%; height: 100%; background: inherit; border-radius: 100%;}@-webkit-keyframes love{0%{top: 110%}}@-moz-keyframes love{0%{top: 110%}}@-ms-keyframes love{0%{top: 110%}}@keyframes love{0%{top: 110%}}.swal2-popup{background: #121212 !important; border: 1px solid #fff !important; border-radius: 8px !important;}.swal2-image{border-radius: 8px !important;}.swal2-file, .swal2-input, .swal2-textarea{color: #fff !important; border-radius: 8px !important;}.swal2-styled.swal2-confirm{background-color: #121212 !important; border: 1px solid #fff !important; color: #fff; border-radius: 8px !important;}.swal2-styled.swal2-confirm:focus{box-shadow: none !important;}.swal2-html-container{color: #fff !important;}.swal2-popup.swal2-toast{box-shadow: none !important;}.swal2-timer-progress-bar{background-color: #303030 !important;}.swal2-title{color: #fff !important;}.swal2-file:focus, .swal2-input:focus, .swal2-textarea:focus{border: 2px solid #fff !important; box-shadow: none !important;}</style></head><body> <div class="container"> <div class="row justify-content-center"> <div class="col-lg-4"> <div id="slideToKonten"></div><div class="card opacity-0"> <div class="card-body"> <img id="gif" src=""> <p id="text_atas"></p><p id="text_bawah"></p><p id="chat_wa"></p></div><div id="button" class="card-footer d-none"> <button class="btn" id="btn_sayang" onclick="diTerima()">Sayang</button> <span id="text_engga"></span> <button class="btn" id="btn_engga" onmouseover="diTolak()">Engga</button> </div></div></div></div></div><div class="bg_heart"></div><script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"> </script> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"> </script> <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script> <script type="text/javascript">function hideContainer(){$(".container").addClass('opacity-0');}function showContainer(){openingK();}function showEnding(){hearts(); $(".container").addClass('d-none');}function button(){$("#button").removeClass('d-none')}async function rejecthtml(){await alertReject.fire('' + textnolak);}let a=0, opening; opening=""; let b=0, hello; hello=""; let c=0, text_dua; text_dua=""; let d=0, text_tiga; text_tiga=""; let ab=0, textb3; textb3=""; let ac=0, last_dua; last_dua=""; function openingK(){if (a < opening.length){document.getElementById("slideToKonten").innerHTML +=opening.charAt(a); a++; setTimeout(openingK, 80);}if (a==opening.length){setTimeout(button, 400); $('#slideToKonten').addClass('d-none'); $(".container .card").removeClass('opacity-0'); $("#gif").attr('src', gif1); $("#text_atas").html(text1); $("#text_bawah").html(textb1); $(".bg_heart").css({'z-index': 1,}); $(".card").css({'z-index': 2,})}}tolakBtn=1; tolakBtn2=1; function diTolak(){if (sayangBtn==1){if (tolakBtn2==1){$("#btn_engga").css({'position': "relative", 'left': "42px",}); $("#btn_sayang").addClass('opacity-0'); $("#text_engga").html(textDiTolak11); tolakBtn2=2;}else if (tolakBtn2==2){$("#btn_engga").css({'position': "relative", 'left': "-100px", 'top': "70px"}); $("#text_engga").html(textDiTolak1); tolakBtn2=3;}else if (tolakBtn2==3){$("#btn_engga").css({'position': "relative", 'left': '0', 'top': '0'}); $("#btn_sayang").removeClass('opacity-0'); $("#text_engga").html(''); tolakBtn2=1;}}else if (sayangBtn==2){if (tolakBtn==1){$("#btn_engga").css({'position': "relative", 'left': "24px",}); $("#btn_sayang").addClass('opacity-0'); $("#text_engga").html(textDiTolak2); tolakBtn=2;}else if (tolakBtn==2){$("#btn_engga").css({'position': "relative", 'left': "-105px", 'top': "70px",}); $("#btn_sayang").addClass('opacity-0'); $("#text_engga").html(textDiTolak22); tolakBtn=3}else if (tolakBtn==3){$("#btn_engga").css({'position': "relative", 'left': '0', 'top': '0'}); $("#btn_sayang").removeClass('opacity-0'); $("#text_engga").html(''); rejecthtml(); tolakBtn=1;}}}sayangBtn=1; async function diTerima(){if (sayangBtn==1){$("#gif").attr('src', gif2); $("#text_atas").html(text_dua); $("#text_bawah").html(textb2); $('#button').addClass('d-none'); setTimeout(button, 400); $("#btn_sayang").html("Mau !!"); sayangBtn=2}else if (sayangBtn==2){$("#gif").attr('src', gif3); $("#text_atas").html(text_tiga); $("#text_atas").css({'margin-bottom': "10px",}); $("#text_bawah").html(textb3); $('#button').addClass('d-none'); $(".bg_heart").css({'z-index': 2,}); $(".card").css({'z-index': 1,}); createHearts();}} const alertInput=Swal.mixin({allowOutsideClick: false, cancelButtonColor: '#FF0040',}); const alertReject=Swal.mixin({toast: true, position: "top-end", allowOutsideClick: false, showConfirmButton: false, timer: 2000, timerProgressBar: true,}); var today=new Date(); var dd=String(today.getDate()).padStart(2, '0'); var mm=String(today.getMonth() + 1).padStart(2, '0'); var yyyy=today.getFullYear(); const monthNames=["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"]; const dayNames=["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"]; function playMusic(){var audio=new Audio(bg_musik); audio.play(); audio.loop=true; audio.addEventListener('ended', function (){this.currentTime=0; this.play();}, false);}async function mulai(){var{value: nama}=await alertInput.fire({title: 'Nama kamu', input: 'text', imageUrl: 'https://c.tenor.com/w5Bc0W8YgTgAAAAC/cute-animals.gif', imageWidth: 200, imageHeight: 200, allowOutsideClick: false, showCancelButton: false,}); if (nama.length >=13){await alertInput.fire('Oops!', 'Nama tidak boleh lebih dari 13 Huruf yaa..'); mulai();}else if (nama==''){await alertInput.fire('Oops!', 'Jangan lupa isi nama kamu yaa..'); mulai();}else if (!/^[a-zA-Z]+$/.test(nama)){await alertInput.fire('Oops!', 'Nama harus berupa Huruf aja yaa..'); mulai();}else{window.nama=nama; variable(); playMusic();}}async function tanpanama(){nama="Kamu"; window.nama=nama; variable();}
-// EDIT TEXT,GIF DAN MUSIK SEMUANYA DISINI 
-async function variable(){opening="Hai " + nama + ", Jawab DUA pertanyaan ini dengan jujur yaa...."; today=dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy; hari=dayNames[new Date().getDay()]; text1=nama + ", sayang gak sama Aku?"; textb1=""; text_dua="kalau sayang, berarti " + nama + " mau dong jadi pacar Aku?🥺"; textb2=""; text_tiga="Yeaayy! Akhirnya " + nama + " dan Aku Jadian🥰💝"; textb3="Dan hari ini.. " + hari.bold() + ", " + today.bold() + " adalah tanggal jadian kita💖"; textnolak="Harus mau >< !!"; gif1="https://i.pinimg.com/originals/fd/ba/0b/fdba0b8080661882ea3bd4a339472a51.gif"; gif2="https://c.tenor.com/aoVSHLODxTAAAAAC/peachcat.gif"; gif3="https://c.tenor.com/aGiJKEun9CYAAAAi/wow-excited.gif"; bg_musik="https://blog.kanzankazu.web.id/vendor/blog/music/music.mp3"; textDiTolak1="Eitss Gabisaa😜"; textDiTolak11="Yakin?😆"; textDiTolak2="Yakin engga?🥰"; textDiTolak22="Wlee, Gabisaa😝"; showContainer();}
-// START 
-mulai(); 
-function createHearts(){$(document).ready(function (){let love=setInterval(function (){let number=Math.floor(Math.random() * 40) + 1; let size=Math.floor(Math.random() * 65) + 10; let left=Math.floor(Math.random() * 100) + 1; let background=Math.floor(Math.random() * 25) + 100; let time=Math.floor(Math.random() * 5) + 5; $('.bg_heart').append("<div class='heart' style='width:" + size + "px;height:" + size + "px;left:" + left + "%;background:rgba(255," + (background - 25) + "," + background + ",1);-webkit-animation:love " + time + "s ease;-moz-animation:love " + time + "s ease;-ms-animation:love " + time + "s ease;animation:love " + time + "s ease'></div>"); $('.bg_heart').append("<div class='heart' style='width:" + (size - 10) + "px;height:" + (size - 10) + "px;left:" + (left + number) + "%;background:rgba(255," + (background - 25) + "," + (background + 25) + ",1);-webkit-animation:love " + (time + 5) + "s ease;-moz-animation:love " + (time + 5) + "s ease;-ms-animation:love " + (time + 5) + "s ease;animation:love " + (time + 5) + "s ease'></div>"); $('.bg_heart').append("<div class='heart' style='width:" + (size - 10) + "px;height:" + (size - 10) + "px;left:" + (left + number) + "%;background:rgba(255," + (background - 25) + "," + (background + 25) + ",1);-webkit-animation:love " + (time + 5) + "s ease;-moz-animation:love " + (time + 5) + "s ease;-ms-animation:love " + (time + 5) + "s ease;animation:love " + (time + 5) + "s ease'></div>"); $('.heart').each(function (){let top=$(this).css("top").replace(/[^-\d\.]/g, ''); let width=$(this).css("width").replace(/[^-\d\.]/g, ''); if (top <=-100 || width >=150){$(this).detach();}});}, 500);});}</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FZGCK97HD1"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-FZGCK97HD1');</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Hai Kamuu!" />
+    <meta property="og:description" content="Iyaaa kamuu🥰" />
+    <meta property="og:image" content="https://c.tenor.com/aGiJKEun9CYAAAAi/wow-excited.gif" />
+    <link rel="shortcut icon" href="https://c.tenor.com/aGiJKEun9CYAAAAi/wow-excited.gif" type="image/x-icon">
+    <title>Hai Kamu!</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            background: #121212;
+            font-family: "Rubik", sans-serif;
+            overflow-x: hidden !important;
+            position: relative !important;
+        }
+
+        p,
+        span {
+            margin: 0;
+            padding: 0;
+            font-weight: 500;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: auto;
+            height: 100vh;
+        }
+
+        .card {
+            background: #121212;
+            color: #fff;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 25px;
+            z-index: 1;
+            position: relative;
+        }
+
+        @media (max-width: 400px) {
+            .card {
+                bottom: 10%;
+            }
+
+            #slideToKonten {
+                position: relative;
+                bottom: 10%;
+            }
+        }
+
+        .card-body {
+            transition: all .4s ease-out;
+        }
+
+        .card-footer {
+            border-top: 1px solid #fff;
+        }
+
+        .btn {
+            border-radius: 10px;
+        }
+
+        .card-footer .btn {
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.145);
+            font-weight: 500;
+        }
+
+        .card-footer .btn:hover,
+        .card-footer .btn:active {
+            border: 1px solid #fff;
+        }
+
+        img#gif {
+            width: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #slideToKonten {
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .bg_heart {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden !important;
+        }
+
+        .heart {
+            z-index: 2;
+            opacity: 0.4;
+            position: absolute;
+            top: -50%;
+            -webkit-transform: rotate(-45deg);
+            -moz-transform: rotate(-45deg);
+            -m-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+
+        .heart:before {
+            position: absolute;
+            top: -50%;
+            left: 0;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 100%;
+        }
+
+        .heart:after {
+            position: absolute;
+            top: 0;
+            right: -50%;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: 100%;
+        }
+
+        @-webkit-keyframes love {
+            0% {
+                top: 110%
+            }
+        }
+
+        @-moz-keyframes love {
+            0% {
+                top: 110%
+            }
+        }
+
+        @-ms-keyframes love {
+            0% {
+                top: 110%
+            }
+        }
+
+        @keyframes love {
+            0% {
+                top: 110%
+            }
+        }
+
+        .swal2-popup {
+            background: #121212 !important;
+            border: 1px solid #fff !important;
+            border-radius: 30px !important;
+        }
+
+        .swal2-image {
+            border-radius: 10px !important;
+        }
+
+        .swal2-file,
+        .swal2-input,
+        .swal2-textarea {
+            color: #fff !important;
+            border-radius: 25px !important;
+        }
+
+        .swal2-styled.swal2-confirm {
+            background-color: #121212 !important;
+            border: 1px solid #fff !important;
+            color: #fff;
+            border-radius: 10px !important;
+        }
+
+        .swal2-styled.swal2-confirm:focus {
+            box-shadow: none !important;
+        }
+
+        .swal2-html-container {
+            color: #fff !important;
+        }
+
+        .swal2-popup.swal2-toast {
+            box-shadow: none !important;
+        }
+
+        .swal2-timer-progress-bar {
+            background-color: #303030 !important;
+        }
+
+        .swal2-top-end .swal2-popup, .swal2-center .swal2-popup {
+            border-radius: 10px !important;
+        }
+
+        .swal2-top-end .swal2-title,.swal2-center .swal2-title {
+            font-size: 1rem !important;
+        }
+
+        .swal2-title {
+            color: #fff !important;
+            font-size: 1.4rem !important;
+        }
+
+        .swal2-file:focus,
+        .swal2-input:focus,
+        .swal2-textarea:focus {
+            border: 2px solid #fff !important;
+            box-shadow: none !important;
+        }
+
+        .sound {
+            position: absolute;
+            bottom: 2%;
+            border-radius: 50% !important;
+            border: 1px solid rgba(255, 255, 255, 0.41);
+            height: 60px;
+            width: 60px;
+            z-index: 5;
+            display: none;
+        }
+
+        .sound:hover {
+            border: 1px solid #fff;
+        }
+
+        .sound i {
+            position: relative;
+            color: #fff;
+            font-size: 25px;
+            top: .5px;
+        }
+
+        #text_atas {
+            margin-bottom: 8px;
+        }
+
+        .wa {
+            border-radius: 20px;
+            z-index: 5;
+            border: 1px solid #fff;
+            color: #fff;
+            margin-top: 20px;
+            transition: all .4s ease-out;
+        }
+
+        .wa:hover {
+            border: 1px solid #25D366;
+        }
+
+        .wa i.uil-whatsapp {
+            color: #25D366;
+            margin-right: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+
+                <div id="slideToKonten"></div>
+
+                <div class="card" style="display: none;">
+                    <div class="card-body">
+                        <img id="gif" src="">
+                        <p id="text_atas"></p>
+                        <p id="text_bawah"></p>
+
+                        <button id="chat_wa" class="btn wa" onclick="buttonWhatsApp()" style="display: none;">
+                            <i class="uil uil-whatsapp"></i>
+                            WhatsApp
+                        </button>
+                    </div>
+                    <div id="button" class="card-footer" style="display: none;">
+                        <button class="btn" id="btn_sayang" onclick="jikaDiterima()">Sayang</button>
+                        <span id="text_engga"></span>
+                        <button class="btn" id="btn_engga" onmouseover="jikaMauNolak()">Engga</button>
+                    </div>
+                </div>
+
+                <button id="sound" class="btn sound">
+                    <i class="uil uil-pause"></i>
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="bg_heart"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+    <script>
+
+        /* ============ SECTION VARIABLE ============ */
+
+
+        /* DATE */
+        let today = new Date();
+        let dd = String(today.getDate()).padStart(2, '0');
+        let mm = String(today.getMonth() + 1).padStart(2, '0');
+        let yyyy = today.getFullYear();
+        const monthNames = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+        const dayNames = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
+
+        /* SWEET ALERT */
+        const alertSwal = Swal.mixin({
+            cancelButtonColor: '#FF0040',
+            allowOutsideClick: false,
+        });
+
+        const alertSayang2 = Swal.mixin({
+            toast: true,
+            position: "center",
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: false,
+        });
+
+        const alertReject = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+        });
+
+        const alertSayang = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            allowOutsideClick: false,
+            showConfirmButton: false,
+            timer: 2800,
+            timerProgressBar: true,
+        });
+
+        /* VAR FOR OPENING */
+        let o = 0, opening;
+        opening = "";
+
+        let h = 0, halo;
+        halo = "";
+
+        let t_1 = 0, text1;
+        text1 = "";
+
+        let t_2 = 0, text2;
+        text2 = "";
+
+        let t_3 = 0, text3;
+        text3 = "";
+
+        let t_3_1 = 0, text3_2;
+        text3_2 = "";
+
+        let audio, secondLeft;
+
+        // ANIMATE CSS
+        const animateCSS = (element, animation, prefix = 'animate__') =>
+            // We create a Promise and return it
+            new Promise((resolve, reject) => {
+                const animationName = `${prefix}${animation}`;
+                const node = document.querySelector(element);
+
+                node.classList.add(`${prefix}animated`, animationName);
+
+                // When the animation ends, we clean the classes and resolve the Promise
+                function handleAnimationEnd(event) {
+                    event.stopPropagation();
+                    node.classList.remove(`${prefix}animated`, animationName);
+                    resolve('Animation ended');
+                }
+
+                node.addEventListener('animationend', handleAnimationEnd, { once: true });
+            });
+
+        /* ============ SECTION FUNCTION  ============ */
+        function showContent() {
+            intro();
+        }
+
+        function buttonAnswer() {
+            $("#button").fadeIn(500).addClass(["animate__animated", "animate__fadeInDown"]);
+            // animateCSS("#btn_sayang", "bounceInLeft");
+            // animateCSS("#btn_engga", "bounceInRight");
+        }
+
+        function buttonSound() {
+            $(".sound").fadeIn(500);
+            $(".sound").addClass(["animate__animated", "animate__fadeInRight"]);
+        }
+
+        function showButtonWa() {
+            animateCSS("#chat_wa", "fadeInDown");
+            $("#chat_wa").show();
+
+            setTimeout(() => {
+                $("#chat_wa").removeClass("animate__fadeInDown");
+            }, 1000);
+
+            setTimeout(() => {
+                $("#chat_wa").addClass(["animate__animated", "animate__pulse", "animate__infinite"]);
+            }, 1100);
+        }
+
+        async function buttonWhatsApp() {
+            if (defaultBtnSayang == 2) {
+                await alertSwal.fire('' + displayTextWa);
+                window.location = "https://api.whatsapp.com/send?phone=&text=" + balasKeWhatsapp;
+            }
+        }
+
+        async function rejectAnswer() {
+            await alertReject.fire('' + textNolak);
+        }
+        async function sayangAnswer() {
+            await alertReject.fire('' + textNolak);
+        }
+
+        function playAudio() {
+            audio = new Audio(bg_musik);
+
+            audio.play();
+            audio.addEventListener('ended', function () {
+                this.pause();
+                $(".sound i").removeClass("uil-pause").addClass('uil-play');
+            }, true);
+
+            $('.sound').on('click', function () {
+                if (audio.paused == false) {
+                    audio.pause();
+                    $(".sound i").removeClass("uil-pause").addClass('uil-play');
+                } else {
+                    audio.play();
+                    $(".sound i").removeClass("uil-play").addClass('uil-pause');
+                }
+            });
+        }
+        function firstText() {
+            if (t_1 < text1.length) {
+                document.getElementById("text_atas").innerHTML += text1.charAt(t_1);
+                t_1++;
+                setTimeout(firstText, 150);
+            } else if (t_1 == text1.length) {
+                buttonAnswer();
+            }
+        }
+
+        function secondText() {
+            if (t_2 < text2.length) {
+                document.getElementById("text_atas").innerHTML += text2.charAt(t_2);
+                t_2++;
+                setTimeout(secondText, 60);
+            } else if (t_2 == text2.length) {
+                $('#button').fadeIn(100);
+            }
+        }
+
+        function lastText() {
+
+            if (t_3 < text3.length) {
+                document.getElementById("text_atas").innerHTML += text3.charAt(t_3);
+                t_3++;
+            } else if (t_3 == text3.length) {
+                document.getElementById("text_bawah").innerHTML += text3_2.charAt(t_3_1);
+                t_3_1++;
+
+                if (t_3_1 == text3_2.length) {
+                    buttonSound();
+                    setTimeout(showButtonWa, 1500);
+                }
+            }
+
+            setTimeout(lastText, 70);
+        }
+
+        /* ======= SETTING TEXTNYA DISINI ======= */
+        async function textVariable() {
+            opening = "Hai " + nama + ", Jawab DUA pertanyaan ini dengan jujur yaa....";
+            today = dayNames[new Date().getDay()] + ', ' + dd + ' ' + monthNames[today.getMonth()] + ' ' + yyyy;
+            text1 = nama + ", sayang gak sama Aku?";
+            text1_2 = "";
+            text2 = "Kalau beneran sayang, berarti " + nama + " mau dong jadi pacar Aku?🥺";
+            text2_2 = "";
+            text3 = "Yeaayy! Akhirnya " + nama + " dan Aku Jadian🥰💝";
+            text3_2 = "Hari ini.. " + today + " adalah tanggal jadian kita💖 Jangan lupa di catat yaa " + nama + " <3";
+            textNolak = "Harus mau pokoknya!😝";
+            jikaSayang = "Aku juga sayang sama kamu koo🥰";
+            gif1 = "https://i.pinimg.com/originals/fd/ba/0b/fdba0b8080661882ea3bd4a339472a51.gif";
+            gif2 = "https://c.tenor.com/aoVSHLODxTAAAAAC/peachcat.gif";
+            gif3 = "https://c.tenor.com/aGiJKEun9CYAAAAi/wow-excited.gif";
+            bg_musik = "https://blog.kanzankazu.web.id/vendor/blog/music/music.mp3";
+            textDiTolak1 = "Eitss Gabisaa😜";
+            textDiTolak2 = "Yakin?😆";
+            textDiTolak3 = "Yakin engga?🥰";
+            textDiTolak4 = "Wlee, Gabisaa😝";
+            balasKeWhatsapp = nama + " udah liat semuanya💖 dan " + nama + " mau banget jadi pacar kamu🥰";
+            displayTextWa = "Kirim isi pesan ini ke WhatsApp Aku yaa🥰";
+            // Call Function
+            showContent();
+        }
+
+        function showHearts() {
+            setInterval(function () {
+                let number = Math.floor(Math.random() * 40) + 1;
+                let size = Math.floor(Math.random() * 50) + 10;
+                let left = Math.floor(Math.random() * 100) + 1;
+                let background = Math.floor(Math.random() * 25) + 100;
+                let time = Math.floor(Math.random() * 5) + 5;
+
+                $('.bg_heart').append(" <div class='heart' style='width:" + size + "px;height:" + size + "px;left:" + left + "%;background:rgba(255," + (background - 25) + "," + background + ",1);-webkit-animation:love " + time + "s ease;-moz-animation:love " + time + "s ease;-ms-animation:love " + time + "s ease;animation:love " + time + "s ease'> </div>");
+
+                $('.bg_heart').append(" <div class='heart' style='width:" + (size - 10) + "px;height:" + (size - 10) + "px;left:" + (left + number) + "%;background:rgba(255," + (background - 25) + "," + (background + 25) + ",1);-webkit-animation:love " + (time + 5) + "s ease;-moz-animation:love " + (time + 5) + "s ease;-ms-animation:love " + (time + 5) + "s ease;animation:love " + (time + 5) + "s ease'> </div>");
+
+                $('.heart').each(function () {
+                    let top = $(this).css("top").replace(/[^-\d\.]/g, '');
+                    let width = $(this).css("width").replace(/[^-\d\.]/g, '');
+                    if (top <= -100 || width >= 150) {
+                        $(this).detach();
+                    }
+                });
+            }, 450);
+        }
+
+        /* START */
+        startContent();
+
+        async function startContent() {
+
+            let {
+                value: nama
+            } = await alertSwal.fire({
+                title: 'Nama kamu',
+                input: 'text',
+                imageUrl: 'https://c.tenor.com/w5Bc0W8YgTgAAAAC/cute-animals.gif',
+                imageWidth: 200,
+                imageHeight: 200,
+                allowOutsideClick: false,
+                showCancelButton: false,
+            });
+
+            if (nama.length > 13) {
+                await alertSwal.fire('Oops!', 'Nama maksimal harus 13 Huruf yaa..');
+                startContent();
+            } else if (nama == '') {
+                await alertSwal.fire('Oops!', 'Jangan lupa isi nama kamu yaa..');
+                startContent();
+            } else if (!/^[a-zA-Z]+$/.test(nama)) {
+                await alertSwal.fire('Oops!', 'Nama harus berupa Huruf aja yaa..');
+                startContent();
+            } else if (nama.length < 3) {
+                await alertSwal.fire('Oops!', 'Nama minimal harus 3 Huruf yaa..');
+                startContent();
+            } else {
+                window.nama = nama;
+                textVariable();
+                playAudio();
+
+                /* SHOW TOOLTIP */
+                $(document).ready(function () {
+                    $('[data-bs-toggle="tooltip"]').tooltip().on('click', function () {
+                        $(this).tooltip("hide");
+                    });
+                });
+            }
+        }
+
+        function intro() {
+
+            let slideContent = document.getElementById("slideToKonten");
+
+            if (o < opening.length) {
+                slideContent.innerHTML += opening.charAt(o);
+                o++;
+
+                $("#slideToKonten").addClass(["animate__animated", "animate__bounceInDown"]);
+
+                setTimeout(intro, 80);
+            }
+
+            if (o == opening.length) {
+                $('#slideToKonten').removeClass(["animate__animated", "animate__bounceInDown"]).addClass(["animate__animated", "animate__bounceOutUp"]).fadeOut(1000);
+
+                setTimeout(() => {
+                    $(".container .card").fadeIn(1000)
+                        .addClass(["animate__animated", "animate__bounceInDown"]);
+
+                    $("#gif").attr('src', gif1);
+                    firstText();
+                }, 1000);
+
+                setTimeout(buttonSound, 1400);
+            }
+        }
+
+        /* ========= ACTION ========= */
+        defaultBtnEngga = 1;
+        defaultBtnEngga_2 = 1;
+
+        function jikaMauNolak() {
+            if (defaultBtnSayang == 1) {
+                if (defaultBtnEngga_2 == 1) {
+                    $("#btn_engga").css({
+                        "position": "relative",
+                        "left": "42px",
+                    });
+
+                    animateCSS("#btn_engga", "swing");
+
+                    $("#btn_sayang").hide();
+
+                    animateCSS("#text_engga", "bounceInDown");
+                    $("#text_engga").html(textDiTolak1);
+
+                    defaultBtnEngga_2 = 2;
+                } else if (defaultBtnEngga_2 == 2) {
+                    $("#btn_engga").css({
+                        'left': "-45px",
+                        'top': "70px"
+                    });
+
+                    animateCSS("#btn_engga", "shakeX");
+
+                    animateCSS("#text_engga", "bounceInDown");
+                    $("#text_engga").html(textDiTolak2);
+
+                    defaultBtnEngga_2 = 3;
+
+                } else if (defaultBtnEngga_2 == 3) {
+
+                    $("#btn_engga").css({
+                        'position': "relative",
+                        'left': '0',
+                        'top': '0'
+                    });
+
+                    animateCSS("#btn_engga", "tada");
+
+                    $("#btn_sayang").show();
+                    animateCSS("#btn_sayang", "tada");
+
+                    animateCSS("#text_engga", "bounceOutDown");
+                    $("#text_engga").html("");
+
+                    defaultBtnEngga_2 = 1;
+                }
+            } else if (defaultAlertSayang == 2) {
+                if (defaultBtnEngga == 1) {
+
+                    $("#btn_engga").css({
+                        "position": "relative",
+                        'left': "-45px",
+                        'top': "70px"
+                    });
+
+                    animateCSS("#btn_engga", "wobble");
+
+                    $("#btn_sayang").hide();
+
+                    animateCSS("#text_engga", "bounceInDown");
+                    $("#text_engga").html(textDiTolak3);
+
+                    defaultBtnEngga = 2;
+                } else if (defaultBtnEngga == 2) {
+                    $("#btn_engga").removeAttr("style");
+
+                    $("#btn_engga").css({
+                        "position": "relative",
+                        "left": "42px",
+                    });
+
+                    animateCSS("#btn_engga", "swing");
+
+                    animateCSS("#text_engga", "bounceInDown");
+                    $("#text_engga").html(textDiTolak4);
+
+                    defaultBtnEngga = 3;
+                } else if (defaultBtnEngga == 3) {
+                    $("#btn_engga").css({
+                        'position': "relative",
+                        'left': '0',
+                        'top': '0'
+                    });
+
+                    animateCSS("#btn_engga", "heartBeat");
+
+                    $("#btn_sayang").show();
+                    animateCSS("#btn_sayang", "heartBeat");
+
+                    animateCSS("#text_engga", "bounceOutDown");
+                    $("#text_engga").html("");
+                    rejectAnswer();
+
+                    defaultBtnEngga = 1;
+                }
+            }
+        }
+
+
+        defaultBtnSayang = 1;
+        defaultAlertSayang = 1;
+
+        async function jikaDiterima() {
+
+            if (defaultBtnSayang == 1) {
+
+                $(".container .card").removeClass(["animate__animated", "animate__bounceInDown"]);
+                animateCSS(".card", "zoomOut");
+                setTimeout(() => {
+                    $('.card').removeClass('animate__zoomOut').hide();
+                }, 500);
+
+                if (defaultAlertSayang == 1) {
+                    await alertSayang2.fire('' + jikaSayang);
+                    defaultAlertSayang = 2;
+                }
+
+                $('.card').fadeIn(500);
+
+                animateCSS(".card", "zoomIn");
+
+                $('#button').hide();
+                $("#gif").attr('src', gif2);
+                $("#text_atas").html("");
+
+                secondText();
+
+                $("#btn_sayang").html("Mau !!");
+
+                defaultBtnSayang = 2;
+
+            } else if (defaultAlertSayang == 2) {
+                animateCSS(".sound", "fadeOutRight");
+                animateCSS(".card", "fadeOutUp");
+                setTimeout(() => {
+                    $('.sound').removeClass('animate__fadeOutRight').hide();
+                    $('.card').removeClass('animate__fadeOutUp').hide();
+                }, 1000);
+                $('#button').addClass('d-none');
+
+                await alertSwal.fire('' + "Aaaa.. akhirnyaa, aku diterimaa!!");
+                await alertSwal.fire('' + "Mau tau gaa, " + nama + "?");
+                await alertSwal.fire('' + "Aku cinta banget sama kamu, " + nama + " !");
+                await alertSwal.fire('' + "Dan aku ga nyangkaa..");
+                await alertSwal.fire('' + "Kita akhirnyaa bersatu🥰");
+                await alertSwal.fire('' + "Oiyaa aku ada suprise nii !!");
+                await alertSwal.fire('' + "Dalam hitungan ke 3..");
+                await alertSwal.fire('' + "Ayo kita hitung bareng bareng🤗");
+
+                await Swal.fire({
+                    title: '',
+                    html: "<strong>3</strong>",
+                    timer: 3000,
+                    allowOutsideClick: false,
+                    showConfirmButton: false,
+                    didOpen: () => {
+                        secondLeft = setInterval(() => {
+                            Swal.getHtmlContainer().querySelector('strong').textContent = (Swal.getTimerLeft() / 1000).toFixed(0.1);
+                        }, 1000);
+                    },
+                    willClose: () => {
+                        clearInterval(secondLeft);
+                    }
+                });
+
+                if ($('.sound i').hasClass('uil-play')) {
+                    audio.play();
+                    $('.sound i').removeClass('uil-play').addClass('uil-pause');
+                }
+
+                showHearts();
+
+                setTimeout(() => {
+                    $('.card').fadeIn(2000);
+                    $("#gif").attr('src', gif3);
+                    $("#gif").addClass(["animate__animated", "animate__fadeInDown"]);
+                    $("#text_atas").html("");
+                    $("#text_bawah").html("");
+                    lastText();
+
+                }, 1800);
+
+                // setTimeout(showButtonWa, 11000);
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>
